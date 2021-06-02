@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter Client</title>
+</head>
+<body>
+<h1 style="color:skyblue; text-align: center;">Tweets</h1><br>
+
+<div style="text-align: left; ">
+	<p style="text-align:center;margin:5px 5px 5px 5px;">{% if newPage %}
+		next set of tweets
+	{% endif %}
+	</p>
+	{% for tweet in data %}
+		<div style="text-align:center;display:block; padding: 5px 5px 5px 5px; margin:5px 5px 5px 5px; border: 1px solid lightgrey; ">
+			<p style="font-size: 20px;color: darkslategray">{{ tweet.text }}</p>
+			{% if tweet.newest_id == newestId %}
+				<h6 style="color: lightgrey;">this is latest tweet</h6>
+			{% endif %}
+			<p style="color: grey;">Created on: {{ tweet.created_at }}</p>
+		</div>
+	{% endfor %}
+</div>
+
+<br>
+<div style="margin: 5px 5px; text-align: center;">
+	{% if nextToken != prevToken %}
+		<a href="/{{ prevToken }}"> Prev </a>
+	{% endif %}
+	<a href="/{{ nextToken }}" style="margin-left: 5%">next</a>
+</div>
+<br>
+
+
+</body>
+</html>

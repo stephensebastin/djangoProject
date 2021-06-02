@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "created_at": "2020-12-11T20:44:52.000Z",
+      "id": "1337498609819021312",
+      "text": "Thanks to everyone who tuned in today..."
+    },{
+      "created_at": "2020-08-29T17:01:44.000Z",
+      "id": "1255542797765013504",
+      "text": "Our developer community is full of inspiring ideas..."
+    }, {
+      "created_at": "2020-05-06T17:24:31.000Z",
+      "id": "1258085245091368960",
+      "text": "It’s now easier to understand Tweet impact..."
+    }
+  ],
+  "meta": {
+    "oldest_id": "1258085245091368960",
+    "newest_id": "1337498609819021312",
+    "result_count": 100,
+    "next_token": "7140w"
+  }
+}
