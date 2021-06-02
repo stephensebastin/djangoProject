@@ -7,7 +7,7 @@ from djangoProject.settings import BASE_DIR
 class TwitterAPIUtil:
 
     @staticmethod
-    def postStatus():
+    def postStatus(tweetJson):
         return True
 
     @staticmethod
