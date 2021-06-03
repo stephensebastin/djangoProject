@@ -20,5 +20,5 @@ from twitterClient import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^(?P<next_token>[a-zA-Z0-9]+)$', views.nextPage, name='nextPage'),
-    url(r'^post/(?P<content>[a-zA-Z0-9]+)$', views.nextPage, name='nextPage'),
+    url(r'^post/(?P<content>.+)$', views.postTweet, name='postTweet'),
 ]
