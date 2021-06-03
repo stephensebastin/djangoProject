@@ -55,3 +55,13 @@ def nextPage(request, next_token):
     return HttpResponse(template.render(context, request))
     #    return HttpResponse("<h1> Simple web app <h1>")
 
+
+def postTweet(request, content):
+    # tweet json creation
+    tweetJSON = content
+    TwitterAPIUtil.postStatus(tweetJSON)
+    context = {
+        'status': 'success',
+    }
+    template = loader.get_template('tweetStatus.html')
+    return HttpResponse(template.render(context, request))
