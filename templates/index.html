@@ -35,8 +35,12 @@
 
 <script type="text/javascript">
 	function postStatus(){
-		var content = document.getElementById("postContent").value;
+		var ar content = document.getElementById("postContent").value;
+		if(content.length > 0) {
 		window.location.href = "/post/"+content;
+		} else{
+			alert("enter some thing");
+		}
 	}
 
 </script>
